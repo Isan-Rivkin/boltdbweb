@@ -92,9 +92,9 @@ func main() {
 	fmt.Print(" ")
 	log.Info("starting boltdb-browser..")
 	var err error
-	fmt.Println("wait mama")
+
 	db, err = bolt.Open(dbName, 0600, &bolt.Options{Timeout: 5 * time.Second})
-	fmt.Println("well well well ")
+	
 	boltbrowserweb.Db = db
 
 	if err != nil {
